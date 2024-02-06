@@ -1,15 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Scoreboard
 {
-    int highscore;
-    readonly int maximumNumberOfScores;
+    private int highscore;
 
     public Scoreboard()
     {
-        maximumNumberOfScores = 10;
         LoadScore();
     }
 

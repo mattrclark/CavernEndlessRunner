@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class PlayerControls : MonoBehaviour
@@ -30,19 +28,15 @@ public class PlayerControls : MonoBehaviour
 
     Scoreboard scoreboard;
 
-    // Start is called before the first frame update
     void Start()
     {
         scoreboard = new Scoreboard();
         score = 0;
         highScore.text = "Highscore: " + scoreboard.GetScore();
-        animator.SetBool("switchSides", false);
     }
 
-    // Update is called once per frame
     void Update()
     {
-
         // Take the first input given by the user
         if(Input.touchCount > 0)
         {

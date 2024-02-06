@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.Advertisements;
+﻿using UnityEngine;
 
 public class AdManager : MonoBehaviour
 {
@@ -13,22 +10,14 @@ public class AdManager : MonoBehaviour
     void Awake()
     {
         if (instance == null)
-        {
             instance = this;
-        }
         else if (instance != this)
-        {
             Destroy(gameObject);
-        }
 
         if (PlayerPrefs.HasKey("AdNumber"))
-        {
             retries = PlayerPrefs.GetInt("AdNumber");
-        }
         else
-        {
             retries = 0;
-        }
 
         DontDestroyOnLoad(gameObject);
     }
@@ -37,7 +26,7 @@ public class AdManager : MonoBehaviour
     {
         if (retries >= adNumber)
         {
-            Advertisement.Show();
+            
             retries = 0;
         }
         else
