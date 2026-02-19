@@ -131,7 +131,6 @@ public class PlayerControls : MonoBehaviour
             SoundManager.instance.RandomizePlayerSfx(playerDeath1, playerDeath2);
             GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
             GetComponent<Rigidbody2D>().gravityScale = 1;
-            AdManager.instance.ShowAdvert();
         }
     }
 
