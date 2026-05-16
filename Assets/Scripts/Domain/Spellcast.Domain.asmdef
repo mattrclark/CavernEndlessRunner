@@ -1,11 +1,8 @@
 {
-    "name": "Spellcast.Application",
+    "name": "Spellcast.Domain",
     "rootNamespace": "Spellcast",
     "references": [
-        "GUID:f51ebe6a0ceec4240a699833d6309b23",
-        "GUID:d151595696e20ee4bab265439ce88cdc",
-        "GUID:b0214a6008ed146ff8f122a6a9c2f6cc",
-        "GUID:eedda06dedd243147873a820625c4283"
+        "GUID:d151595696e20ee4bab265439ce88cdc"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
