@@ -1,0 +1,19 @@
+{
+    "name": "Spellcast.Infrastructure",
+    "rootNamespace": "Spellcast",
+    "references": [
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:8b1880e6b46e39744b2db04af803830c",
+        "GUID:d151595696e20ee4bab265439ce88cdc",
+        "GUID:b0214a6008ed146ff8f122a6a9c2f6cc"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
