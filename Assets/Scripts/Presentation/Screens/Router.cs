@@ -1,8 +1,6 @@
-using UnityEngine;
-
 namespace Spellcast.Presentation.Screens
 {
-    public abstract class Router : MonoBehaviour
+    public abstract class Router : InjectableMonoBehaviour
     {
         private View? currentView;
         

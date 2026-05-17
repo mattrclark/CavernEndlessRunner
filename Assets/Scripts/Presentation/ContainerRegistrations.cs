@@ -1,5 +1,6 @@
 using System.Linq;
 using System.Reflection;
+using Spellcast.Presentation.Scenes.Game;
 using VContainer;
 using VContainer.Unity;
 
@@ -9,8 +10,15 @@ namespace Spellcast.Presentation
 	{
 		public void Install(IContainerBuilder builder)
 		{
+			RegisterSceneSwitchers(builder);
 			RegisterRouters(builder);
 			RegisterInteractors(builder);
+		}
+
+		private static void RegisterSceneSwitchers(IContainerBuilder builder)
+		{
+			builder.Register<GameSceneSwitcher>(Lifetime.Transient)
+			       .As<IGameSceneSwitcher>();
 		}
 
 		private static void RegisterRouters(IContainerBuilder builder)
@@ -23,7 +31,8 @@ namespace Spellcast.Presentation
 			                      .ToList();
 
 			foreach (var router in routers)
-				builder.RegisterComponentInHierarchy(router);
+				builder.Register(router, Lifetime.Singleton)
+					.AsSelf();
 		}
 
 		private static void RegisterInteractors(IContainerBuilder builder)

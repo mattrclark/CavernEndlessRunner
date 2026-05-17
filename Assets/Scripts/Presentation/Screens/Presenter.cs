@@ -2,19 +2,13 @@ using UnityEngine;
 
 namespace Spellcast.Presentation.Screens
 {
-	public abstract class Presenter<TView> : MonoBehaviour where TView : View
+	public abstract class Presenter<TView> : InjectableMonoBehaviour where TView : View
 	{
 		protected TView View = null!;
 
-		private void Awake()
+		protected override void OnDependenciesInjected()
 		{
 			View = GetComponent<TView>();
-
-			OnAwake();
-		}
-
-		protected virtual void OnAwake()
-		{
 		}
 
 #if UNITY_EDITOR
